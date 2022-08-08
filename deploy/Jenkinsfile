@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls'
-        sh 'cp -R ../helm/* .'
+        sh 'cp -R helm/* .'
         sh 'ls -ltr'
         sh 'pwd'
         sh '/usr/local/bin/helm upgrade --install wfademowithdb -app wfademowithdb --set image.repository=wfademoacr.azurecr.io/wfademowithdb --set image.tag=latest'
