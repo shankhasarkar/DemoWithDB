@@ -16,8 +16,8 @@ public class DB_Init {
     {
         aDb.deleteAll();
 
-        aDb.save(new CustomerEntity(new Customer("Scott", "Parker", "WFA-100", Date.valueOf("1980-06-01"))));
-        aDb.save(new CustomerEntity(new Customer("John", "Page", "WFA-101", Date.valueOf("1980-09-01"))));
-        aDb.save(new CustomerEntity(new Customer("Randy", "Hall", "WFA-102", Date.valueOf("1980-7-01"))));
+//        aDb.save(new CustomerEntity(new Customer("Scott", "Parker", "WFA-100", Date.valueOf("1980-06-01"))));
+//        aDb.save(new CustomerEntity(new Customer("John", "Page", "WFA-101", Date.valueOf("1980-09-01"))));
+//        aDb.save(new CustomerEntity(new Customer("Randy", "Hall", "WFA-102", Date.valueOf("1980-7-01"))));
     }
 }
