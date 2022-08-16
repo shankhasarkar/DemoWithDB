@@ -1,16 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "wfademowithdb.fullname" . }}
+  name: {{ include "demowithdb.fullname" . }}
   labels:
-    {{- include "wfademowithdb.labels" . | nindent 4 }}
+    {{- include "demowithdb.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      nodePort: {{ .Values.service.nodePort }}
       targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
-    {{- include "wfademowithdb.selectorLabels" . | nindent 4 }}
+    {{- include "demowithdb.selectorLabels" . | nindent 4 }}
