@@ -11,7 +11,7 @@ import java.sql.Date;
 
 @Data
 @Entity
-@Table(name = "WFA_Customer")
+@Table(name = "wfa_customer")
 @NoArgsConstructor
 public class CustomerEntity {
     @Id private String loyaltyId;
