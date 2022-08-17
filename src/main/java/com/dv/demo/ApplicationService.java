@@ -11,18 +11,7 @@ import java.util.concurrent.CountDownLatch;
 @SpringBootApplication
 @EnableJpaRepositories
 public class ApplicationService {
-    @Autowired static CountDownLatch closeLatch;
-
     public static void main(String[] args) throws InterruptedException {
         ApplicationContext ctx = SpringApplication.run(ApplicationService.class, args);
-
-        closeLatch = ctx.getBean(CountDownLatch.class);
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                closeLatch.countDown();
-            }
-        });
-        closeLatch.await();
     }
 }
